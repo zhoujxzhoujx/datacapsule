@@ -1,0 +1,4 @@
+2020/06/02 16:49:38 - datacapsule.py - 18 - INFO - 测试登录
+2020/06/02 16:49:43 - base_page.py - 24 - INFO - 打开url http://data.airlook.com/
+2020/06/02 16:49:57 - base_page.py - 58 - ERROR - 定位active失败
+2020/06/02 16:49:57 - datacapsule.py - 81 - ERROR - 登录失败

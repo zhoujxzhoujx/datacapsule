@@ -1,0 +1,12 @@
+2020/06/03 20:31:26 - datacapsule.py - 18 - INFO - 测试登录
+2020/06/03 20:31:27 - base_page.py - 26 - INFO - 打开url http://data.airlook.com/
+2020/06/03 20:31:38 - base_page.py - 58 - INFO - 通过class_name定位元素 active
+2020/06/03 20:31:38 - datacapsule.py - 32 - INFO - 登录成功
+2020/06/03 20:31:39 - base_page.py - 58 - INFO - 通过class_name定位元素 data-rank-wrap
+2020/06/03 20:31:39 - base_page.py - 44 - INFO - 通过xpath定位元素 //div[@class='select']/button[last()-2]
+2020/06/03 20:31:39 - base_page.py - 44 - INFO - 通过xpath定位元素 //div[@class='select']/following::button[last()-2]
+2020/06/03 20:31:41 - base_page.py - 44 - INFO - 通过xpath定位元素 //div[@class='select']/button[last()-1]
+2020/06/03 20:31:41 - base_page.py - 44 - INFO - 通过xpath定位元素 //div[@class='select']/following::button[last()-1]
+2020/06/03 20:31:42 - base_page.py - 44 - INFO - 通过xpath定位元素 //div[@class='select']/button[last()]
+2020/06/03 20:31:42 - base_page.py - 44 - INFO - 通过xpath定位元素 //div[@class='select']/following::button[last()]
+2020/06/03 20:31:44 - base_page.py - 44 - INFO - 通过xpath定位元素 //ul/li[2]
