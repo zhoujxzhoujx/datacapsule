@@ -1,9 +1,9 @@
 from time import sleep
-
 from selenium import webdriver
 from framwork.base_page import BasePage
 from framwork.logger import MyLog
 import os
+from tools.oper_ini import OperIni
 
 class Login(BasePage):
     URL = 'http://data.airlook.com/'
@@ -12,7 +12,6 @@ class Login(BasePage):
 
     def __init__(self):
         super().__init__(self.driver, url=self.URL, file_path=self.File_Path)
-
 
     def login(self, user_name, password):
          self._log.info("测试登录")
@@ -27,17 +26,21 @@ class Login(BasePage):
          self.wait_find_element('login', 'login', wait_type='clickable').click()
          if self.web_ready():
             try:
-
+                # ele=self.wait_find_element('login', 'alldata')
                 ele = self.find_element('login', 'alldata')
-                self._log.info("登录成功")
-                print("登录成功")
-                scree_File_Path = os.path.dirname(os.path.dirname(__file__)) + '/screenshot/'+'全国数据.png'
-                self.driver.get_screenshot_as_file(scree_File_Path)
+                print(ele)
             except Exception as e:
                 self._log.error("登录失败")
                 print(format(e))
-                raise Exception
+                # raise Exception
+                return False
+            else:
+                self._log.info("登录成功")
+                print("登录成功")
+                scree_File_Path = os.path.dirname(os.path.dirname(__file__)) + '/screenshot/' + '全国数据.png'
+                self.driver.get_screenshot_as_file(scree_File_Path)
+                return True
 
 if __name__ == '__main__':
-            datacapsule = Login()
-            datacapsule.login('18520836299','airlook1234')
+            dd = Login()
+            dd.login('18520836299','airlook1234')

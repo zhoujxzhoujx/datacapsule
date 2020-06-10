@@ -1,6 +1,4 @@
 # coding = utf-8
-import os
-
 from selenium import webdriver
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -14,6 +12,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 
 class BasePage:
     def __init__(self, driver, url, file_path):
+
         self._driver = driver
         self._url = url
         self._log = MyLog().get_log('myAutoTest')
@@ -204,14 +203,13 @@ class BasePage:
 
 if __name__ == '__main__':
     driver = webdriver.Chrome()
-    File_Path = os.path.dirname(os.path.dirname(__file__))+"\config\locate.ini"
-    opr = OperIni(File_Path)
-    ele1 = opr.get_section('login', 'login_name')
-    select = ele1.split('=>')
-    select_by = select[0].strip()
-    select_value = select[1].strip()
-    print("select_value"+select_value)
-    base = BasePage(driver,'http://data.airlook.com/statistical',File_Path)
+    # opr = OperIni(r'E:\datacapsule\config\locate.ini')
+    # ele1 = opr.get_section('login', 'login_name')
+    # select = ele1.split('=>')
+    # select_by = select[0].strip()
+    # select_value = select[1].strip()
+    # print("select_value"+select_value)
+    base = BasePage(driver,'http://data.airlook.com/',r'E:\datacapsule\config\locate.ini')
     base.get_url()
     driver.maximize_window()
     print(base.web_ready())
